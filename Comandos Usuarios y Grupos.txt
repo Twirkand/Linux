@@ -1,0 +1,26 @@
+Usuarios y grupos
+1. groupadd nombre_del_grupo → crear un nuevo grupo.
+2. groupdel nombre_del_grupo → borrar un grupo.
+3. groupmod -n nuevo_nombre_del_grupo viejo_nombre_del_grupo →
+renombrar un grupo.
+4. adduser usuario1 → Crear un nuevo usuario, mediante un asistente.
+5. useradd -c "Nombre Apellido" -g admin -d /home/usuario1 -s
+/bin/bash usuario1 → Crear un nuevo usuario perteneciente al grupo “admin”.
+6. useradd usuario1 → crear un nuevo usuario.
+7. userdel -r usuario1 → borrar un usuario, eliminando su directorio Home.
+8. usermod -c "Usuario de " -g system -d /ftp/usuario1 -s
+/sbin/nologin usuario1 → cambiar los atributos de un usuario.
+9. usermod -aG plugdev,dialout,pip user1 → agregar el usuario user1 a otros
+grupos existentes, para incrementar sus permisos (en este caso, agregar la posibilidad de
+conectar dispositivos, configurar y utilizar el modem)
+10.passwd → cambiar contraseña.
+11.passwd usuario1 → cambiar la contraseña de 'usuario1' (solamente ejecutable como
+superusuario).
+12.chage -E 2011-12-31 user1 → colocar un plazo para la contraseña del usuario. En
+este caso dice que la clave expira el 31 de diciembre de 2011.
+13.pwck → chequear la sintaxis correcta el formato de fichero de '/etc/passwd' y la existencia
+de usuarios.
+14.grpck → chequear la sintaxis correcta y el formato del fichero '/etc/group' y la existencia
+de grupos.
+15.newgrp grupo1 → registra a un nuevo grupo para cambiar el grupo predeterminado de
+los ficheros creados recientemente.
