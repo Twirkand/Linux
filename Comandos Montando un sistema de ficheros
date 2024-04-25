@@ -1,0 +1,19 @@
+Montando un sistema de ficheros
+1. mount /dev/hda2 /mnt/hda2 → montar un disco llamado hda2. Verifique primero la
+existencia del directorio '/ mnt/hda2'; si no está, debe crearlo.
+2. umount /dev/hda2 → desmontar un disco llamado hda2. (Antes es necesario salir del
+punto '/mnt/hda2'.
+3. fuser -km /mnt/hda2 → forzar el desmontaje cuando el dispositivo está ocupado.
+4. umount -n /mnt/hda2 → correr el desmontaje sin leer el fichero /etc/mtab. Útil
+cuando el fichero es de solo lectura o el disco duro está lleno.
+5. mount /dev/fd0 /mnt/floppy → montar un disco flexible (floppy).
+6. mount /dev/cdrom /mnt/cdrom → montar un cdrom / dvdrom.
+7. mount /dev/hdc /mnt/cdrecorder → montar un cd regrabable o un dvdrom.
+8. mount /dev/hdb /mnt/cdrecorder → montar un cd regrabable / dvdrom (un dvd).
+9. mount -t udf,iso9660 -o loop file.iso /mnt/cdrom → montar un
+fichero de imagen de un medio óptico (como un CD o DVD en formato ISO).
+10.mount -t vfat /dev/hda5 /mnt/hda5 → montar un sistema de ficheros FAT32.
+11.mount -t ntfs-3g /dev/hda5 /mnt/hda5 → montar un sistema de ficheros
+NTFS.
+12.mount /dev/sda1 /mnt/usbdisk → montar un usb pen-drive o una memoria (sin
+especificar el tipo de sistema de ficheros).
