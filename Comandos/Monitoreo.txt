@@ -1,0 +1,33 @@
+Monitoreando y depurando
+1. top → mostrar en tiempo real las tareas de linux.
+2. htop → mostrar y gestionar las tareas con una interfaz amistosa.
+3. ps -eafw → muestra las tareas Linux.
+4. ps -e -o pid,args --forest → muestra las tareas Linux en un modo jerárquico.
+5. ps -o pid,cmd -ww -C wget → listar todas las instancias del comando wget con
+sus argumentos.
+6. pstree → mostrar un árbol sistema de procesos.
+7. pidof pppd → mostrar el pid del proceso pppd.
+8. kill -9 ID_Processo → forzar el cierre de un proceso y terminarlo.
+9. kill -1 ID_Processo → forzar un proceso para recargar la configuración.
+10.killall Nombre_Proceso → terminar un proceso por el nombre del comando y no
+por el ID.
+11.kill -HUP $(ps -A -o state,pid --no-header | grep -e '^[Zz]'
+| awk '{print $2}' | xargs) → terminar todos los procesos zombies.
+12.lsof -p $$ → mostrar una lista de ficheros abiertos por procesos.
+13.lsof /home/user1 → muestra una lista de ficheros abiertos en un camino dado del
+sistema.
+14.strace -c ls >/dev/null → mostrar las llamadas del sistema hechas y recibidas
+por un proceso.
+15.strace -f -e open ls >/dev/null → mostrar las llamadas a la biblioteca.
+16.watch -n1 'cat /proc/interrupts' → mostrar interrupciones en tiempo real.
+17.last reboot → mostrar historial de reinicio.
+18.lsmod → mostrar los módulos del kernel cargados.
+19.free -m → muestra el estado de la RAM en megabytes.
+20.smartctl -A /dev/hda → monitorear la fiabilidad de un disco duro a través de
+SMART.
+21.smartctl -i /dev/hda → chequear si SMART está activado en un disco duro.
+22.tail -f /var/log/dmesg → mostrar eventos inherentes al proceso de carga del
+kernel.
+23.tail -f /var/log/messages → mostrar los eventos del sistema.
+24.multitail --follow-all /var/log/{dmesg,messages} → mostrar dos
+registros de eventos en una misma pantalla.
