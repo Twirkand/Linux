@@ -1,0 +1,30 @@
+Información del sistema
+1. arch → mostrar la arquitectura de la máquina (1).
+2. uname -m → mostrar la arquitectura de la máquina (2).
+3. uname -r → mostrar la versión del kernel usado.
+4. uname -a → mostrar la información completa.
+5. lsb_release -a → mostrar la información completa de la distribución.
+6. cat /etc/issue → mostrar el nombre de la distribución
+7. dmidecode -q → mostrar los componentes (hardware) del sistema.
+8. hdparm -i /dev/hda → mostrar las características de un disco duro.
+9. hdparm -tT /dev/sda → realizar prueba de lectura en un disco duro.
+10.cat /proc/cpuinfo → mostrar información de la CPU.
+11.grep -c ^processor /proc/cpuinfo → mostrar número de procesadores.
+12.cat /proc/interrupts → mostrar las interrupciones.
+13.cat /proc/meminfo → verificar el uso de memoria.
+14.cat /proc/swaps → mostrar ficheros swap.
+15.cat /proc/version → mostrar la versión del kernel.
+16.cat /proc/net/dev → mostrar adaptadores de red y estadísticas.
+17.cat /proc/mounts → mostrar el sistema de ficheros montado.
+18.lscpu → mostrar información sobre el microprocesador.
+19.lspci -tv → mostrar los dispositivos PCI.
+20.lsusb -tv → mostrar los dispositivos USB.
+21.lshw → listar el hardware.
+22.discover → listar el hardware.
+23.date → mostrar la fecha del sistema.
+24.cal 2011 → mostrar el almanaque de 2011.
+25.cal 07 2011 → mostrar el almanaque para el mes julio de 2011.
+26.date 041217002011.00 → colocar (declarar, ajustar) fecha y hora.
+27.clock -w → guardar los cambios de fecha en la BIOS.
+28.blkid → mostrar información (nombre, etiqueta, UUID, tipo de partición) sobre los
+dispositivos de bloque (discos rígidos, etc.)
