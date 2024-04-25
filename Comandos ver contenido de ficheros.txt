@@ -1,0 +1,10 @@
+Ver el contenido de un fichero
+1. cat file1 → ver los contenidos de un fichero comenzando desde la primera línea.
+2. tac file1 → ver los contenidos de un fichero comenzando desde la última línea.
+3. more file1 → ver el contenido de un fichero de manera paginada.
+4. less file1 → parecido al commando 'more' pero permite avanzar, retroceder, y buscar
+(compatible con algunos comandos de vi).
+5. head -2 file1 → ver las dos primeras líneas de un fichero (ó 10, si no se especifica la
+cantidad de líneas).
+6. tail -2 file1 → ver las dos últimas líneas de un fichero (ó 10, si no se especifica la
+cantidad de líneas).
