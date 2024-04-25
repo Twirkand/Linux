@@ -1,0 +1,30 @@
+Encontrar archivos
+1. find / -name file1 → buscar fichero y directorio a partir de la raíz del sistema.
+2. find / -user user1 → buscar ficheros y directorios pertenecientes al usuario
+“user1”.
+3. find /home/user1 -name \*.bin → buscar ficheros con extensión ”. bin” dentro
+del directorio / home/user1.
+4. find /usr/bin -type f -atime +100 → buscar ficheros binarios no usados en
+los últimos 100 días.
+5. find /usr/bin -type f -mtime -10 → buscar ficheros creados o cambiados
+dentro de los últimos 10 días.
+6. find / -name \*.rpm -exec chmod 755 '{}' \; → buscar ficheros con
+extensión ”.rpm” y modificar permisos.
+7. find . -type f -print0 | xargs -0 chmod 644 → modificar
+recursivamente los permisos a todos los ficheros bajo el directorio actual.2)
+8. find / -xdev -name \*.rpm → Buscar ficheros con extensión '.rpm' ignorando los
+dispositivos removibles como cdrom, pen-drive, etc.…
+9. find . -maxdepth 1 -name *.jpg -print -exec convert "{}" -
+resize 80×60 "thumbs/{}" \; → agrupar ficheros redimensionados en el
+directorio actual y enviarlos a directorios en vistas de miniaturas (requiere convertir desde
+Imagemagick).
+10.find /tmp/dir1 -depth -regextype posix-extended -regex '.*(\
+s+|:+|\\+|>+|<+|"+|\*+|\?+|\|+).*' -execdir rename 's/(\s+|:
++|\\+|>+|<+|”+|\*+|\?+|\|+)/_/g' "{}" \; → renombrar recursivamente
+todos los directorios y ficheros bajo /tmp/dir1, cambiando los espacios y otros caracteres
+extraños por guiones bajos.
+11.locate \*.ps → encuentra ficheros con extensión ”.ps” ejecutados primeramente con el
+command updatedb.
+12.whereis halt → mostrar la ubicación de un fichero binario, de ayuda o fuente. En este
+caso pregunta dónde está el comando halt.
+13.which comando → mostrar la ruta completa a un comando
