@@ -1,0 +1,47 @@
+Gestionar archivos y directorios
+1. cd → ir al directorio personal.
+2. cd /home → cambiar al directorio “/home”.
+3. cd .. → retroceder un nivel.
+4. cd ../.. → retroceder 2 niveles.
+5. cd ~user1 → ir al directorio user1.
+6. cd - → ir (regresar) al directorio anterior.
+7. pwd → mostrar el camino del directorio actual.
+8. ls → listar el contenido de un directorio.
+9. ls -F → listar el contenido de un directorio (distinguiendo los directorios con una barra)
+10.ls -l → listar el contenido de un directorio, mostrando los detalles.
+11.ls -lh → listar el contenido de un directorio, mostrando los detalles (y el tamaño en un
+formato “humanizado”).
+12.ls -a → listar el contenido de un directorio, incluendo los ficheros ocultos.
+13.ls *[0-9] → listar los ficheros y carpetas que contienen números.
+14.ls -laR | less → listar recursivamente el contenido del directorio actual y todos los
+subdirectorios y archivos, incluyendo los ocultos, separados por página.
+15.tree → mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(1)
+16.lstree → mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz.(2)
+17.mkdir dir1 → crear un directorio de nombre 'dir1'.
+18.mkdir dir1 dir2 → crear dos directorios a la vez (en la ubicación actual).
+19.mkdir -p /tmp/dir1/dir2 → crear una estructura de directorios, si no existe.
+20.rm file1 → eliminar el archivo 'file1'.
+21.rm -f file1 → eliminar el archivo 'file1' en modo forzado.
+22.rmdir dir1 → borrar el directorio 'dir1'.
+23.rm -rf dir1 → eliminar recursivamente y en modo forzado el directorio 'dir1' con todo
+lo que contenga.
+24.rm -rf dir1 dir2 → borrar dos directorios con su contenido de forma recursiva.
+25.mv dir1 new_dir → renombrar o mover un fichero o carpeta (directorio).
+26.cp file1 destino/ → copiar un fichero al destino elegido.
+27.cp file1 file2 destino/ → copiar a la vez dos ficheros a un mismo directorio.
+28.cp file1 file2 → copiar file1 en file2.
+29.cp dir /* . → copiar todos los ficheros de un directorio dentro del directorio de trabajo
+actual.
+30.cp -a /tmp/dir1 . → copiar un directorio dentro del directorio actual de trabajo.
+31.cp -a dir1 → copiar un directorio.
+32.cp -a dir1 dir2 → copiar dos directorio al unísono.
+33.ln -s file1 lnk1 → crear un enlace simbólico al fichero o directorio.
+34.ln file1 lnk1 → crear un enlace físico al fichero o directorio.
+35.touch file1 → actualizar la fecha de modificación de file1, o crearlo si no existe.
+36.touch -t 0712250000 file1 → modificar el tiempo real (tiempo de creación) de un
+fichero o directorio.
+37.file file1 → salida (volcado en pantalla) del tipo mime de un fichero texto.
+38.iconv -l → listas de cifrados conocidos.
+39.iconv -f fromEncoding -t toEncoding inputFile > outputFile →
+crea una nueva forma del fichero de entrada asumiendo que está codificado en
+fromEncoding y convirtiéndolo a ToEncoding.
