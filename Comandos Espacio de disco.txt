@@ -1,0 +1,19 @@
+Espacio en disco
+1. df -h → mostrar una lista de las particiones montadas.
+2. ls -lSr | more → mostrar el tamaño de los ficheros y directorios ordenados por
+tamaño.
+3. du -sh dir1 → Estimar el espacio usado por el directorio 'dir1'.
+4. du -sk * | sort -nr → mostrar en orden descendente el tamaño de los ficheros y
+subdirectorios en la ubicación actual, en KiB.
+5. du -h --max-depth=1 | sort -nr → mostrar en orden descendente el tamaño de
+todos los subdirectorios en la ubicación actual, usando unidades de medida adaptables.
+6. du -k --max-depth=1 | sort -k1 -nr | awk '{printf "%.3f GiB\t
+%s\n", $1/(1048576), $2}' | less → mostrar en orden descendente el tamaño
+de los directorios y archivos, en GiB.
+7. rpm -q -a --qf '%10{SIZE}t%{NAME}n' | sort -k1,1n → mostrar el
+espacio usado por los paquetes rpm instalados organizados por tamaño (Fedora, Redhat y
+otros).
+8. dpkg-query -W -f='${Package}\t${Installed-Size}\n' | sort -k 2
+-nr | grep -v deinstall | head -n 25 | awk '{printf "%.3f \t
+%s\n", $2/(1024), $1}' → mostrar (en Debian o derivadas) un listado con los 25
+paquetes instalados que más espacio consumen (en orden descendente).
