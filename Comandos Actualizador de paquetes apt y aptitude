@@ -1,0 +1,29 @@
+Actualizador de paquetes apt y aptitude (Debian, Ubuntu y
+otros)
+1. apt-get install package_name → instalar / actualizar un paquete deb.
+2. apt-cdrom install package_name → instalar / actualizar un paquete deb desde un
+cdrom.
+3. apt-get update → actualizar la lista de paquetes.
+4. apt-get upgrade → actualizar todos los paquetes instalados.
+5. apt-get remove package_name → eliminar un paquete deb del sistema.
+6. apt-get check → verificar la correcta resolución de las dependencias.
+7. apt-get clean → limpiar cache desde los paquetes descargados.
+8. apt-cache search searched-package → retorna lista de paquetes que
+corresponde a la serie «paquetes buscados».
+9. aptitude search paquete → busca un paquete por el nombre.
+10.aptitude search ~dpaquete → busca un paquete por la descripción.
+11.aptitude show paquete | less → muestra información sobre un paquete.
+12.aptitude install paquete1 paquete2 … → instala varios paquetes con sus
+dependencias y recomendaciones.
+13.aptitude -R install paquete → instala un paquete con sus dependencias, pero
+sin las recomendaciones.
+14.aptitude why paquete → lista las razones por las que se debería instalar el paquete.
+15.aptitude why-not paquete → lista las razones por las que no se puede instalar el
+paquete.
+16.aptitude -rsvW install paquete → simula la instalación de un paquete con sus
+dependencias y recomendaciones, detallando cada una.
+17.aptitude remove paquete → desinstala un paquete.
+18.aptitude purge paquete → desinstala un paquete y lo limpia de la cache.
+19.aptitude clean → limpia la cache de paquetes.
+20.apt-file -xi search 'sql' → busca todos los paquetes que contengan un archivo
+o directorio con la expresión sql (sin considerar mayúsculas o minúsculas).3
