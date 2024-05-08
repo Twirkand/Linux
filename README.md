@@ -1,1 +1,1 @@
-Carpeta de Linux personal. '<3'
+Carpeta de Linux personal. <3
